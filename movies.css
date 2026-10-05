@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0a2c34, #072b4f);
+    color: #222;
+    min-height: 100vh;
+}
+
+nav {
+    background: #232f3e;
+    color: white;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 19px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 28px;
+}
+
+.search-container form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.search-container input {
+    width: 350px;
+    padding: 10px 40px 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 19px;
+}
+
+.clear-btn {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: #777;
+    padding: 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.clear-btn:hover {
+    color: #222;
+}
+
+.search-container button {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.search-btn {
+    padding: 10px 20px;
+    background-color: #f5c518;
+    color: #222;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #ffdd45;
+    box-shadow: 0 6px 10px rgba(236, 240, 0, 0.25);
+    transform: translate(-2px);
+}
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+main section {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-container {
+    width: 85%;
+    min-height: 450px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 0 12px #ccc;
+    overflow: hidden;
+}
+
+.movie-poster {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-poster img {
+    width: 100%;
+    height: 450px;
+    object-fit: contain;
+    display: block;
+}
+
+.movie-info {
+    width: 60%;
+    padding: 25px;
+    background: white;
+    color: #222;
+}
+
+.movie-info h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.movie-info>p {
+    margin: 12px 0;
+    line-height: 1.5;
+}
+
+.movie-info strong {
+    color: #232f3e;
+}
+
+.movie-genre {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.movie-genre h3 {
+    width: 100%;
+    margin-bottom: 3px;
+}
+
+.movie-genre p {
+    background: #232f3e;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+.message {
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+}
+
+.message i {
+    font-size: 50px;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.message h2 {
+    color: #232f3e;
+    margin-bottom: 10px;
+}
+
+.message p {
+    color: #666;
+    font-size: 16px;
+}
+
+footer {
+    text-align: center;
+    background-color: #232f3e;
+    color: white;
+    padding: 20px;
+    margin-top: 45px;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 950px) {
+    .navbar {
+        gap: 20px;
+    }
+
+    .movie-container {
+        width: 95%;
+    }
+
+    .movie-poster img {
+        height: 400px;
+    }
+
+    .movie-info {
+        padding: 20px;
+    }
+
+    .movie-info h2 {
+        font-size: 27px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .search-container form {
+        width: 100%;
+    }
+
+    .input-container {
+        flex: 1;
+    }
+
+    .search-container input {
+        width: 100%;
+    }
+
+    .movie-container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .movie-poster {
+        width: 100%;
+    }
+
+    .movie-poster img {
+        width: 100%;
+        height: 450px;
+    }
+
+    .movie-info {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .search-container form {
+        flex-direction: column;
+    }
+
+    .input-container {
+        width: 100%;
+    }
+
+    .search-container button {
+        width: 100%;
+    }
+
+    main {
+        padding: 0 10px;
+    }
+
+    .movie-poster img {
+        height: 400px;
+    }
+
+    .movie-info h2 {
+        font-size: 24px;
+    }
+
+    .message {
+        padding: 35px 15px;
+    }
+}
