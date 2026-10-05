@@ -14,7 +14,7 @@ inputBox.addEventListener("input", () => {
 
 const getMovieInfo = async (movie) => {
     try {
-        const myApiKey = "3a8f8b9b"
+        const myApiKey = "YOUR_API_KEY"
         const url = `https://www.omdbapi.com/?apikey=${myApiKey}&t=${movie}`
         const response = await fetch(url)
         if (!response.ok) {
